@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="shortcut icon" href="../image/ico/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <script src="../js/ajax.js"></script>
+    <style>
+        #register{
+            width: 400px;
+            margin: 150px auto;
+        } 
+        #alert_info{
+            margin: 2px;
+            padding: 2px;
+            text-align: center;
+            margin-bottom: 10px;
+            display: none;
+        }
+        .fullscreenvideo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            -webkit-transition: 1s opacity;
+            transition: 1s opacity;
+        }
+        .videocontainer{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -100;
+        }
+        .videocontainer:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            background: rgba(255, 255, 255, .65);
+        }
+        .container{
+            opacity: 0.6;
+        }
+        .panel-primary{
+            border-color: pink;
+        }
+        .panel-primary .panel-heading{
+            background-color: pink;
+            border-color: pink;
+        }
+        .btn-primary{
+            background-color: pink;
+            border-color: pink;
+        }
+        .panel-body{
+            color: pink;
+        }
+        .panel-body a{
+            color: pink;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oBtn=document.getElementById("btn1");
+            var oAlert=document.getElementById("alert_info");
+            var aInputs=document.getElementsByTagName("input");
+            oBtn.onclick=function(){
+                $ajax({
+                    method:"post",
+                    url:"register.php",
+                    data:{
+                        username:aInputs[0].value,
+                        password:aInputs[1].value,
+                        addTime:new Date().getTime()
+                    },
+                    success:function(result){
+                        var obj=JSON.parse(result);
+                        if(obj.code){
+                            oAlert.className='alert alert-danger';
+                        }else{
+                            oAlert.className='class alert-success';
+                            setTimeout(function(){
+                                location.href="login.html";
+                            },2000);
+                        }
+                        oAlert.style.display="block";
+                        oAlert.innerHTML=obj.message;
+                    },
+                    error:function(msg){
+                        alert(msg);
+                    }
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="videocontainer">
+        <video src="../video/dengluvideo/红A.mp4" class="fullscreenvideo"  poster=""  playsinline="" autoplay="" muted="" loop="">
+        </video>
+    </div>
+    <div class="container">
+        <div class="panel panel-primary" id="register">
+            <div class="panel-heading">
+                注册
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="username">用户名:</label>
+                    <input type="text" name="username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">密码:</label>
+                    <input type="text" name="password" class="form-control">
+                </div>
+                <div id="alert_info" class="alert alert-danger"></div>
+                <a href="login.html">马上登录</a>
+                <button id="btn1" class="btn btn-primary pull-right">注册</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

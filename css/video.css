@@ -1,0 +1,2211 @@
+/* 清除默认样式的代码 */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    }
+    /* 设置网页统一的字体大小，行高，字体系列相关 */
+    body {
+        font: 16px/1.5 "Helvetica Neue", Arial, sans-serif;
+        list-style: none;
+        text-decoration: none;
+        /* color: #333; */
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    p{
+        margin: 0px;
+    }
+    .h4, .h5, .h6, h4, h5, h6 {
+        margin-top:0px;
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+    /* 清除列表默认样式 */
+    ul,
+    ol {
+        list-style: none;
+    }
+    /* 去除默认的倾斜效果 */
+    em,
+    i {
+        font-style: normal;
+    }
+    /* 去除a标签的下划线 */
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+    /* 设置img的垂直方式为居中对齐，去除img默认下间隙 */
+    img {
+        vertical-align: middle;
+    }
+    /* 去除input默认样式 */
+    input {
+        border: none;
+        outline: none;
+        color: #333;
+    }
+    /* 左浮动 */
+    .fl {
+        float: left;
+    }
+    /* 右浮动 */
+    .fr {
+        float: right;
+    }
+    /* 双伪元素清除 */
+    .clearfix::before,
+    .clearfix::after {
+        content: " ";
+        display: table;
+    }
+    .clearfix::after {
+        clear: both;
+    }
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+/* 各个页面相同的样式，如头部尾部 */
+.wrapper{
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.wrapper .bodys{
+    margin-top: 120px;
+    /* background-color: red; */
+}
+.wrapper .bodys .left{
+    width: 700px;
+    height: 1000px;
+    float: left;
+    /* background-color: red; */
+}
+.wrapper .bodys .left .title{
+    width: 100%;
+    height: 100px;
+    /* background-color: #8D9196; */
+}
+.wrapper .bodys .left .title h3{
+     /* 文本显示为省略号 */
+        text-overflow: ellipsis;
+        /* 不换行 */
+        white-space: nowrap;
+        /* 溢出隐藏 */
+        overflow: hidden;
+        font-size: 22px;
+        font-weight: normal;
+}
+.wrapper .bodys .left .title .qita ul{
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    margin-left: 10px;
+    /* background-color: #cf3fff; */
+}
+.wrapper .bodys .left .title .qita ul li{
+    height: 30px;
+    width: 70px;
+    line-height: 30px;
+    float: left;
+    font-size: 16px;
+    color: rgb(148,153,160);
+}
+.wrapper .bodys .left .title .qita ul li i{
+    vertical-align: middle;
+}
+.wrapper .bodys .left .title .qita ul li span{
+    vertical-align: middle;
+}
+.wrapper .bodys .left .title .qita ul li:nth-child(2){
+    width: 50px;
+}
+.wrapper .bodys .left .title .qita ul li:nth-child(3){
+    width: 190px;
+}
+.wrapper .bodys .left .title .qita ul li:nth-child(4){
+    width: 210px;
+}
+.wrapper .bodys .left .zy_media{
+    width: 100%;
+    height: 393px;
+}
+.wrapper .bodys .left .money{
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    line-height: 50px;
+    color: rgb(97,102,109);
+    /*  */
+    /* border: 1px solid rgb(227,229,231);
+    box-sizing: border-box; */
+    box-shadow: 1px 1px 10px 1px rgb(193, 193, 193);
+}
+.wrapper .bodys .left .money span{
+    margin-right: 10px;
+}
+.wrapper .bodys .left .money i{
+    margin-right: 10px;
+    vertical-align: middle;
+    
+}
+.wrapper .bodys .left .money .fasongdanmu{
+    display: inline-block;
+    width: 380px;
+    height: 30px;
+    
+}
+.wrapper .bodys .left .money .fasongdanmu input{
+    /* display: inline-block; */
+    width: 250px;
+    height: 30px;
+    vertical-align: middle;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+    padding-left: 20px;
+    background-color: rgb(241,242,243);
+}
+.wrapper .bodys .left .money .fasongdanmu a{
+    display: inline-block;
+    height: 30px;
+    background-color: rgb(241,242,243);
+    color: rgb(148,153,160);
+    padding-right: 10px;
+    line-height: 30px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.wrapper .bodys .left .money .fasongdanmu a:hover{
+    color: rgb(125,210,243);
+    text-decoration: none;
+}
+.wrapper .bodys .left .money .fasongdanmu button{
+    height: 30px;
+    width: 50px;
+    background-color: #00a4ff;
+    border: none;
+    text-align: center;
+    line-height: 30px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    color: white;
+}
+.wrapper .bodys .toubi{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    /* background-color: yellow; */
+    color: rgb(97,102,109);
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(225, 212, 212);
+}
+.wrapper .bodys .toubi .toubileft{
+    flex: 6;
+    /* background-color: #ED508A; */
+}
+.wrapper .bodys .toubi .toubimid{
+    flex: 2;
+    /* background-color: #cf3fff; */
+}
+.wrapper .bodys .toubi .toubiright{
+    flex: 3;
+    /* background-color: #ED508A; */
+}
+.wrapper .bodys .toubi .toubileft li{
+    width: 65px;
+    height: 100%;
+    float: left;
+    line-height: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+    /* 文本显示为省略号 */
+    text-overflow: ellipsis;
+    /* 不换行 */
+    white-space: nowrap;
+    /* 溢出隐藏 */
+    overflow: hidden;
+
+}
+.wrapper .bodys .toubi .toubileft li:hover{
+    color: #00a4ff;
+}
+.wrapper .bodys .toubi .toubileft li i{
+    font-size: 28px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.wrapper .bodys .toubi .toubileft li span{
+    font-size: 20;
+    
+}
+.wrapper .bodys .toubi .toubiright li{
+    line-height: 50px;
+    float: left;
+    margin-right: 20px;
+}
+.wrapper .bodys .toubi .toubiright li:hover{
+    color: #00a4ff;
+}
+.wrapper .bodys .toubi .toubiright li i{
+    vertical-align: middle;
+}
+.wrapper .bodys .toubi .toubiright span{
+    font-size: 13px;
+}
+.wrapper .bodys .jianjie{
+    width: 100%;
+    height: 70px;
+    /* background-color: red; */
+    position: relative;
+}
+.wrapper .bodys .jianjie ul{
+    width: 100%;
+    margin-top: 20px;
+    /* height: 70px; */
+    /* 文本显示为省略号 */
+    text-overflow: ellipsis;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* background-color: yellow; */
+}
+.wrapper .bodys .jianjie #jianJieBtn{
+    border-radius: 7px;
+    margin-top: 7px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    color: #aaa;
+}
+.wrapper .bodys .jianjie #jianJieBtn:hover{
+    color: #00a4ff;
+}
+.wrapper .bodys .jianjie .jianjie_tap{
+    width: 100%;
+    height: 40px;
+    /* background-color: rebeccapurple; */
+    padding-right: 30px;
+    margin-top: 20px;
+}
+.wrapper .bodys .jianjie .jianjie_tap ul{
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    border-bottom:1px solid rgb(193, 193, 193);
+    padding-bottom: 12px;
+    padding-right: 40px;
+    
+    /* background-color: red; */
+}
+.wrapper .bodys .jianjie .jianjie_tap ul li{
+    flex: 1;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 28px;
+    padding: 0px 15px 0px 0px;
+    
+}
+.wrapper .bodys .jianjie .jianjie_tap ul li div{
+    height: 100%;
+    border-radius: 16px;
+    background-color: rgb(241,242,243);
+    /* background-color: yellow; */
+}
+.wrapper .bodys .jianjie .jianjie_tap ul li div a{
+    margin-top: 15px;
+    text-decoration: none;
+}
+.wrapper .bodys .jianjie .jianjie_tap ul li div a:hover{
+    color: #00a4ff;
+    text-decoration: none;
+}
+.wrapper .bodys .right{
+    width: 300px;
+    height: 800px;
+    float: left;
+    padding-left: 20px;
+    /* background-color: skyblue; */
+}
+.right .right_body{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+}
+.right .right_body .top{
+    width: 100%;
+    height: 100px;
+    /* background-color: skyblue; */
+}
+.right .right_body .top .left{
+    width: 48px;
+    height: 100px;
+    float: left;
+    /* background-color: yellow; */
+}
+.right .right_body .top .left img{
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+}
+.right .right_body .top .right{
+    width:232px;
+    height: 50px;
+    float: left;
+}
+.right .right_body .top .right h4{
+    float: left;
+    margin-right: 20px;
+}
+.right .right_body .top .right span{
+    font-size: 14px;
+    color: #aaa;
+}
+.right .right_body .top .right div{
+    font-size: 14px;
+    color: #aaa;
+}
+.right .right_body .top .right section{
+    width:212px;
+    height: 50px;
+    line-height: 50px;
+    /* background-color: red; */
+}
+.right .right_body .top .right a:hover{
+    color: #00a4ff;
+    text-decoration: none;
+}
+.right .right_body .top .right a:hover span{
+    color: #00a4ff;
+}
+.right .right_body .top .right section span:first-child{
+    display: inline-block;
+    width: 76px;
+    height: 28px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 10px;
+    color: #00a4ff;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-right: 11px;
+}
+.right .right_body .top .right section span:last-child{
+    display: inline-block;
+    width: 120px;
+    height: 28px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: #00a4ff;
+}
+.right .right_body .bottom{
+    height: 100%;
+    width: 100%;
+    /* background-color: skyblue; */
+}
+.right .right_body .bottom .topss{
+    cursor: pointer;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;  
+    background-color: rgb(241,242,243);
+    border-radius: 8px;
+}
+.right .right_body .bottom .topss span{
+    margin-left: 20px;
+    vertical-align: middle;
+}
+.right .right_body .bottom .bodyss{
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    /* background-color: skyblue; */
+}
+.right .right_body .bottom .bodyss .bodyssTop{
+    width: 100%;
+    height: 30px;
+    /* background-color: red; */
+    line-height: 30px;
+    position: relative;
+}
+.right .right_body .bottom .bodyss .bodyssTop span:nth-child(2){
+    width: 30px;
+    height: 20px;
+    background-color: #00a4ff;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.right .right_body .bottom .bodyss .bodyssTop span:nth-child(4){
+    position: absolute;
+    right: 1px;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+} 
+.right .right_body .bottom .bodyss .bodyssBody{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+}
+.right .right_body .bottom .bodyss .bodyssBody .bodyssBodys{
+    width: 100%;
+    height: 81px;
+    margin-top: 12px;
+    /* background-color: salmon; */
+}
+.right .right_body .bottom .bodyss .bodyssBody .bodyssBodys .bodyssBodysImg{
+    position: relative;
+}
+.right .right_body .bottom .bodyss .bodyssBody .bodyssBodys .bodyssBodysImg .bodyssBodysImgPosition{
+    position: absolute;
+    left: 90px;
+    top: 55px;
+    width: 45px;
+    height: 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+}
+.right .right_body .bottom .bodyss .bodyssBody .bodyssBodys img{
+    width: 141px;
+    height: 80px;
+    border-radius: 10px;
+    float: left;
+}
+.right .right_body .bottom .bodyss .bodyssBody .bodyssBodys .bodyssBodysText{
+    width: 129px;
+    height: 81px;
+    float: left;
+    /* background-color: #cf3fff; */
+    margin-left: 10px;
+}
+.right .right_body .bottom .bodyss .bodyssBody .bodyssBodys .bodyssBodysText p{
+    width: 129px;
+    height: 38px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+.right .right_body .bottom .bodyss .bodyssBody .bodyssBodys .bodyssBodysText p a:hover{
+    color:#00a4ff;
+    text-decoration: none;
+}
+.right .right_body .bottom .bodyss .bodyssBody .bodyssBodys .bodyssBodysText .divone:hover{
+    color:#00a4ff;
+}.right .right_body .bottom .bodyss .bodyssBody .bodyssBodys .bodyssBodysText .divone:hover a{
+    color:#00a4ff;
+    text-decoration: none;
+}
+.right .right_body .bottom .bodyss .bodyssBody .bodyssBodys .bodyssBodysText span:hover{
+    color:#00a4ff;
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------ */
+.shortcut{
+    /* height: 100px; */
+    position: relative; 
+}
+.dabox{
+    width: 100%;
+    height: 80px;
+    /* background-color: pink; */
+    /* background-color:pink; */
+    /* background:-webkit-linear-gradient(top,rgba(0, 0, 0,0.5),rgba(255, 255, 255,0)); */
+    background-color: pink;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    /* background-color: black; */
+}
+.shortcut .dabox .leftdaohang{
+    /* background-color: black; */
+    width: 530px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 16px;
+    padding-left: 15px;
+    float: left;
+}
+.shortcut .dabox .leftdaohang ul li a{
+    display: inline-block;
+    height: 80px;
+    margin-left: 9px;
+    color: white;
+    text-decoration: none;
+}
+.shortcut .dabox .sousuo input{
+    width: 300px;
+    height: 40px;
+    float: left;
+    margin-top: 20px;
+    /* border-radius: 8px; */
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    border: 1px solid #00a4ff;
+    padding-left: 20px;
+    margin-left: 20px;
+    border-right: none;
+    opacity: 0.7;
+}
+.shortcut .dabox .sousuo button{
+    width: 60px;
+    height: 40px;
+    margin-top: 20px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    border: 1px solid #00a4ff;
+    border-left: none;
+    font-size: 18px;
+    opacity: 0.8;
+}
+.shortcut .dabox .rightdaohang{
+    float: right;
+    width:552px;
+    height: 60px;
+    margin-top: -40px;
+}
+.shortcut .dabox .rightdaohang ul{
+    width: 100%;
+    height: 60px;
+}
+.shortcut .dabox .rightdaohang li{
+    height: 40px;
+    float: left;
+    padding-right: 9px;
+    margin-left: 11px;
+    /* line-height: 40px; */
+
+}
+.shortcut .dabox .rightdaohang li a{
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+
+}
+.dongman{
+    height: 500px;
+    /* background-color: red; */
+    margin-top: 60px;
+}
+
+.dongman .left{
+    width: 1100px;
+    height: 100%;
+    /* background-color: pink; */
+    float: left;
+}
+.dongman .left span{
+    float: left;
+}
+.dongman .left .title{
+    width: 1100px;
+    height: 40px;
+    /* background-color: bisque; */
+}
+.dongman .left .title span img{
+    margin-left: 5px;   
+}
+.dongman .left .title span a{
+    margin-left: 10px;
+    font-size: 30px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+.dongman .left .title ul{
+    height: 40px;
+    width: 550px;
+    background-color: #f6f7f8;
+    float: left;
+    border-radius: 30px;
+    line-height: 40px;
+    margin-left: 30px;
+}
+.dongman .left .title li{
+    float: left;
+    font-size: 14px;
+    margin-right: 30px;
+    
+}
+.dongman .left .title li:first-child{
+    display: inline-block;
+    font-size: 16px;
+    background-color: aqua;
+    border-radius: 30px;
+    width: 100px;
+    text-align: center;
+}
+.dongman .left .title .one a:first-child{
+    color: white;
+    text-decoration: none;
+}
+.dongman .left .title .shijianbao{
+    height: 40px;
+    border: 1px solid #e3e5e7;
+    margin-left: 179px;
+    margin-right: 20px;
+    line-height: 40px;
+    border-radius: 10px;
+    padding:0px 10px ; 
+    box-sizing: border-box;
+}
+.dongman .left .title .chaikangenduo{
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #e3e5e7;
+    border-radius: 10px;
+    padding:0px 10px ; 
+    box-sizing: border-box;
+}
+.dongman .body{
+    margin-top: 10px;
+}
+.dongman .body li{
+    width: 267px;
+    height: 215px;
+    background-color: white;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 22px;
+    position: relative;
+}
+.dongman .body li:nth-child(4n){
+    margin-right: 0px;
+}
+.dongman .body li img{
+    border-radius: 10px;
+    width: 267px;
+    height: 160px;
+    /* background-color: #00a4ff; */
+}
+.dongman .body li h4{
+    margin-top: 10px;
+}
+.dongman .body li .box_jieshao{
+    display: inline-block;
+    position: absolute;
+    width: 267px;
+    height: 40px;
+    bottom: 55px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background:-webkit-linear-gradient(bottom,rgba(255, 255, 255,0.5),rgba(0, 0, 0,0));
+    filter: invert(100%);
+}
+.dongman .body li .box_jieshao img{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.dongman .body li .box_jieshao p{
+    float: left;
+    color: black;
+    margin-top: 8px;
+    margin-left: 3px;
+}
+.dongman .body li .box_jieshao span{
+    float: right;
+    color: black;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+.dongman .right{
+    width: 290px;
+    height: 100%;
+    /* background-color: skyblue; */
+    float: right;
+}
+.dongman .right .R_box{
+    width: 100%;
+    height: 40px;
+    /* background-color: #b0a; */
+}
+.dongman .right .R_left{
+    float: left;
+    font-size: 30px;
+    line-height: 40px;
+    padding-left: 13px;
+}
+.dongman .right .R_right{
+    float: right;
+    border: 1px solid #e3e5e7;
+    line-height: 38px;
+    padding: 0px 10px;
+    border-radius: 8px;
+}
+.dongman .right .R_table{
+    margin-top: 10px;
+    padding-left: 13px;
+    border-top: 1px solid #e3e5e7;
+    height: 450px;
+}
+.dongman .right .R_table li{
+    height: 50px;
+    /* background-color: aquamarine; */
+}
+.dongman .right .R_table li p{
+    float: left;
+    color: #ff6a51;
+    margin-right: 10px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.dongman .right .R_table li span{
+    float: left;
+    line-height: 50px;
+}
+.dongman .right .R_table li:nth-child(2n){
+    background-color: #f6f7f8;
+}
+.shortcut .dabox .leftdaohang ul li i {
+    font-size: 18px;
+    margin-left: 5px;
+    color: white;
+    cursor: pointer;
+}
+.shortcut .dabox .leftdaohang ul li a:last-child {
+    margin-left: 2px;
+    text-decoration: none;
+}
+.shortcut .dabox .sousuo button i {
+    font-size: 22px;
+}
+.shortcut .dabox .rightdaohang ul li:nth-child(1) {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.shortcut .dabox .rightdaohang ul li:nth-child(1) img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.shortcut .dabox .rightdaohang ul li:nth-child(n+2) {
+    line-height: 20px;
+}
+.shortcut .dabox .rightdaohang ul li:nth-child(n+2) i {
+    display: block;
+    height: 22px;
+    font-size: 22px;
+    text-align: center;
+}
+.shortcut .dabox .rightdaohang ul li:nth-child(n+2) span {
+    display: block;
+}
+.shortcut .dabox .rightdaohang ul li:last-child {
+    line-height: 0px;
+    width: 100px ;
+    background-color: #FC80A3;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 10px;
+    padding: 0px;
+    font-size: 22px;
+}
+.shortcut .dabox .rightdaohang ul li:last-child a {
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    /* background-color: skyblue; */
+    margin-top: 0px;
+    text-decoration: none;
+}
+.shortcut .dabox .rightdaohang ul li:last-child i {
+    display: inline-block;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 36px;
+    vertical-align: middle;
+}
+.shortcut .dabox .rightdaohang ul li:last-child span {
+    display: inline-block;
+}
+.shortcut .dabox .leftdaohang {
+    position: relative;
+}
+/* 首页模块 */
+.shortcut .dabox .leftdaohang .shouye{
+    position: absolute;
+    width: 600px;
+    height: 540px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 2px rgb(193, 193, 193);
+    display: none;
+    z-index: 12;
+} 
+.shortcut .dabox .leftdaohang .shouye .shouye1{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    padding-top: 10px;
+    border: 1px solid #E3E5E7;
+    padding-bottom: 10px;
+} 
+.shortcut .dabox .leftdaohang .shouye .shouye1 ul{
+    flex: 1;
+}
+.shortcut .dabox .leftdaohang .shouye .shouye1 ul{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #E3E5E7;
+}
+.shortcut .dabox .leftdaohang .shouye .shouye1 ul:nth-child(3) li{
+    border-right: none;
+    line-height: 64px;
+}
+.shortcut .dabox .leftdaohang .shouye .shouye1 ul:last-child li{
+    border-right: none;
+    line-height: 86px;
+}
+.shortcut .dabox .leftdaohang .shouye .shouye1 ul li{
+    width: 100%;
+    height: 50px;
+    flex: 1;
+    line-height: 50px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.shortcut .dabox .leftdaohang .shouye .shouye1 ul li:hover{
+    background-color: rgba(207, 207, 207,0.5);
+}
+.shortcut .dabox .leftdaohang .shouye .shouye1 ul li a{
+    width: 100%;
+    height: 50px;
+    margin-left: 0px;
+    text-decoration: none;
+}
+.shortcut .dabox .leftdaohang .shouye .shouye1 ul li a svg{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.shortcut .dabox .leftdaohang .shouye .shouye1 ul li a span{
+    color: black;
+    font-size: 16px;
+}
+.shortcut .dabox .leftdaohang ul li .icon-arrow-down{
+    display: inline-block;
+    height: 80px;
+}
+/* 首页模块 */
+
+/* 直播模块 */
+.shortcut .dabox .leftdaohang .zhiboBoxA{
+    width: 450px;
+    height: 270px;
+    border-radius: 10px;
+    border: 1px solid rgb(227,229,231);
+    box-shadow: 1px 1px 5px 2px rgb(193, 193, 193);
+    display: none;
+    position: absolute;
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox {
+    border-radius: 10px;
+    width: 450px;
+    height: 270px;
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+    
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .left {
+    flex: 1;
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .left .top {
+    height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 18px;
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .left .bottom {
+    border-right: 1px solid black;
+    margin-top: 10px;
+    width: 100%;
+    height: 175px;
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .left .bottom a {
+    width: 50px;
+    height: 80px;
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 18px;
+    text-decoration: none;
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .left .bottom a img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .left .bottom a img:hover{
+    transition: all 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 2px #cf3fff;
+    /* color: blue; */
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .left .bottom a p {
+    color: black;
+    font-size: 12px;
+    line-height: 20px;
+    width: 50px;
+    height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .right {
+    flex: 1;
+    /* background-color: blue; */
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .right .top {
+    height: 50px;
+    /* background-color: skyblue; */
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 18px;
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .right .bottom{
+    width: 100%;
+    height: 175px;
+    margin-top: 10px;
+    /* background-color: red; */
+    padding-right: 10px;
+    padding-left: 10px;
+} 
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .right .bottom img{
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .right .bottom img{
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .right .bottom a{
+    height: 80px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    margin-left: 0px;
+    text-decoration: none;
+}
+.shortcut .dabox .leftdaohang .zhiboBoxA .zhiboBox .right .bottom a img:hover{
+    transition: all 0.5s;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 2px #cf3fff;
+}
+/* 直播模块 */
+
+/* 游戏模块 */
+.shortcut .dabox .leftdaohang .youxi{
+    left: 100px;
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    border: 1px solid rgb(227,229,231);
+    box-shadow: 1px 1px 5px 2px rgb(193, 193, 193);
+    display: none;
+    border-radius: 10px;
+}
+.shortcut .dabox .leftdaohang .YouXiImg{
+    position: absolute;
+    width: 160px;
+    height: 250px;
+    left: 495px;
+    top: 100px;
+    z-index: 11;
+    display: none;
+}
+.shortcut .dabox .leftdaohang .YouXiImg li{
+    display: none;
+}
+.shortcut .dabox .leftdaohang .YouXiImg img{
+    border-radius: 10px;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left{
+    flex: 2;
+    border-right: 1px solid #E3E5E7;
+    padding-right: 10px;
+    /* border-radius: 10px; */
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left .top{
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    position: relative;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left .top a{
+    margin-left: 0px;
+    text-decoration: none;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left .top img{
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left .top img:hover{
+    transition: all 0.5s;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 2px purple;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left .top span{
+    position: absolute;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    left: 10px;
+    bottom: 0px;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* 不换行 */
+    white-space: nowrap;
+    /* 显示文本省略号 */
+    text-overflow: ellipsis;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left .bottom{
+    width: 100%;
+    height: 95px;
+    /* background-color: skyblue; */
+    margin-top: 15px;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left .bottom ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 95px;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left .bottom ul li{
+    display: inline-block;
+    width: 60px;
+    height: 95px;
+    /* background-color: red; */
+    
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left .bottom ul li a{
+    width: 60px;
+    height: 95px;
+    margin: 0px;
+    text-decoration: none;
+    line-height:25px;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left .bottom ul li img{
+    width: 60px;
+    height: 60px;
+    margin: 0px;
+    vertical-align: 0px;
+    border-radius: 10px;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left .bottom ul li img:hover{
+    transition: all 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 2px purple;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .left .bottom ul li a span{
+    display: inline-block;    
+    width: 60px;
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    line-height:25px;
+    font-size: 14px;
+    color: black;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .right{
+    flex: 1;
+    /* background-color: blue; */
+    padding-left: 10px;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .right ul{
+    width: 100%;
+    height: 100%;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .right ul li{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    /* background-color: red; */
+    /* border-bottom: 1px solid black; */
+    margin-bottom: 3px;
+    line-height: 0px;
+} 
+.shortcut .dabox .leftdaohang .youxi .youxiA .right ul li a{
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    height: 30px;
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .right ul li:hover{
+    /* background-color: #E3E5E7; */
+    background-color: rgba(207, 207, 207,0.5);
+}
+.shortcut .dabox .leftdaohang .youxi .youxiA .right ul li span{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+
+/* 游戏模块 */
+
+/* 漫画模块 */
+.shortcut .dabox .leftdaohang .manhua {
+    position: absolute;
+    left: 150px;
+    width: 500px;
+    height: 300px;
+    z-index: 11;
+    border-radius: 10px;
+    background-color: white;
+    float: left;
+    border: 1px solid rgb(227,229,231);
+    box-shadow: 1px 1px 5px 2px rgb(193, 193, 193);
+    display: none;
+}
+.shortcut .dabox .leftdaohang .ManHuaImg{
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    /* background-color: red; */
+    left: 640px;
+    top: 130px;
+    z-index: 11;
+    display: none;
+}
+.shortcut .dabox .leftdaohang .ManHuaImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 15px;
+    /* background-color: red; */
+    display: flex;
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .left{
+    flex: 4;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    /* padding-right: 10px; */
+    border-right: 1px solid #E3E5E7;
+    line-height: 0px;
+
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .left ul li{
+    width: 140px;
+    height: 125px;
+    float: left;
+    margin-right: 13px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-left: 0px;
+    /* background-color: yellow; */
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .left ul li a{
+    width: 140px;
+    height: 125px;
+    margin-left: 0px;
+    text-decoration: none;
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .left ul li a div{
+    width: 140px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .left ul li a img{
+    width: 140px;
+    height: 90px;
+    border-radius: 10px;
+    /* background-color: rebeccapurple; */
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .left ul li a img:hover{
+    transition: all 0.5s;
+    transform: scale(1.2);
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .left ul li a span{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    /* background-color: yellowgreen; */
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .right{
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    line-height: 0px;
+    padding-left: 10px;
+    /* background-color: skyblue; */
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .right ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .right ul li{
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .right ul li:nth-child(-n+7):nth-child(n+2):hover{
+    background-color: rgba(207, 207, 207,0.5);
+    border-radius: 5px;
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .right ul li a h4{
+    font-size: 20px;
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .right ul li a{
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    line-height: 38px;
+    color: black;
+    text-decoration: none;
+}
+.shortcut .dabox .leftdaohang .manhua .manhuaA .right ul li:nth-child(-n+4) span{
+    color:  #F67C4D;
+}
+/* 漫画模块 */
+/* 下载客户端模块 */
+.shortcut .dabox .leftdaohang .xiaZai{
+width: 350px;
+height: 250px;
+background-color: white;
+position: absolute;
+left: 300px;
+border-radius: 10px;
+z-index: 11;
+border: 1px solid rgb(227,229,231);
+box-shadow: 1px 1px 5px 2px rgb(193, 193, 193);
+display: none;
+
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA{
+width: 100%;
+height: 100%;
+border-radius: 10px;
+/* background-color: pink; */
+padding: 20px 10px 10px 10px; 
+display: flex;
+flex-direction: column;
+line-height: 0px;
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .top{
+flex: 10;
+padding-bottom: 10px;
+/* background-color: blue; */
+display: flex;
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .top .left{
+flex: 1;
+border-right: 1px solid #E3E5E7;
+/* background-color: yellow; */
+position: relative;
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .top .left h4{
+height: 30px;
+line-height: 30px;
+text-align: center;
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .top .left p{
+height: 20px;
+line-height: 20px;
+font-size: 14px;
+text-align: center;
+color: #B5B8BD;
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .top .left img{
+width: 110px;
+height: 110px;
+/* background-color: red; */
+margin-top: 15px;
+position: absolute;
+left: 50%;
+transform: translate(-50%);
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .top .right{
+flex: 1;
+/* background-color: yellow; */
+position: relative;
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .top .right h4{
+height: 30px;
+line-height: 30px;
+text-align: center;
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .top .right p{
+height: 20px;
+line-height: 20px;
+font-size: 14px;
+text-align: center;
+color: #B5B8BD;
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .top .right img{
+width: 70px;
+height: 70px;
+/* background-color: red; */
+margin-top: 15px;
+position: absolute;
+left: 50%;
+transform: translate(-50%);
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .top .right a{
+width: 90px;
+height: 30px;
+position: absolute;
+bottom: 0px;
+text-decoration: none;
+left: 50%;
+transform: translate(-50%);
+margin-left: 0px;
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .top .right button{
+width: 90px;
+height: 30px;
+border-radius: 5px;
+position: absolute;
+bottom: 0px;
+left: 50%;
+transform: translate(-50%);
+cursor: pointer;
+color: white;
+border: none;
+background-color: #00AEEC;
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .top .right{
+flex: 1;
+/* background-color: pink; */
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .bottom{
+flex: 2;
+/* background-color: skyblue; */
+text-align: center;
+border-radius: 10px;
+}
+.shortcut .dabox .leftdaohang .xiaZai .xiaZaiA .bottom a{
+/* line-height: 0px; */
+text-decoration: none;
+margin-left: 0px;
+height: 100%;
+line-height: 36px;
+color: #B5B8BD;
+font-size: 16px;
+
+}
+/* 下载客户端模块 */
+/* 头像区 */
+.shortcut .dabox .rightdaohang .touxiang{
+z-index: 12;
+transform-origin:top right;
+transition: all 0.5s;
+position: relative;
+}
+.shortcut .dabox .rightdaohang .touxiang:hover{
+transform: scale(2);
+}
+.shortcut .dabox .touxiangA{
+width: 350px;
+height: 450px;
+position: absolute;
+right: 360px;
+top: 60px;
+padding-top: 20px;
+z-index: 11;
+display: none;
+/* background-color: red; */
+}
+.shortcut .dabox .touxiangA .touxiangB{
+width: 100%;
+height: 100%;
+/* display: none; */
+background-color: white;
+box-shadow: 1px 1px 5px 2px rgb(193, 193, 193);
+border-radius: 10px;
+padding-top: 3px;
+position: relative;
+} 
+.shortcut .dabox .touxiangA .touxiangB .one{
+width: 100%;
+height: 80px;
+/* background-color: blue; */
+text-align: center;
+}
+.shortcut .dabox .touxiangA .touxiangB .one .niandudahuiyuan{
+font-size: 14px;
+display: inline-block;
+background-color:rgb(251,113,153) ;
+border-radius: 20px;
+line-height: 20px;
+width: 80px;
+height: 20px;
+}
+.shortcut .dabox .touxiangA .touxiangB .one .niandudahuiyuan a{
+display: inline-block;
+text-decoration: none;
+width: 100%;
+height: 100%;
+border-radius: 20px;
+line-height: 20px;
+color: white;
+}
+.shortcut .dabox .touxiangA .touxiangB .one h2 a{
+color:rgb(251,113,153) ;
+text-decoration: none;
+}
+.shortcut .dabox .touxiangA .touxiangB .one div{
+width: 100%;
+height: 30px;
+/* background-color: skyblue; */
+line-height: 30px;
+/* float: left; */
+}
+.shortcut .dabox .touxiangA .touxiangB .one div span{
+display: inline-block;
+margin-right: 10px;
+}
+.shortcut .dabox .touxiangA .touxiangB .one div span a{
+/* display: inline-block; */
+float: left;
+text-decoration: none;
+}
+.shortcut .dabox .touxiangA .touxiangB .one div span a p{
+display: inline-block;
+}
+.shortcut .dabox .touxiangA .touxiangB .two{
+padding: 0px 20px 0px 20px;
+line-height: 30px;
+}
+.shortcut .dabox .touxiangA .touxiangB .two a{
+width: 100%;
+height: 100%;
+display: flex;
+text-decoration: none;
+/* background-color: skyblue; */
+}
+.shortcut .dabox .touxiangA .touxiangB .two p{  
+width: 100%;
+height: 15px;
+line-height: 15px;
+text-align: center;
+font-size: 14px;
+color: #8D9196;
+/* background-color: red; */
+}
+.shortcut .dabox .touxiangA .touxiangB .two a .icon{
+flex: 1;
+}
+.shortcut .dabox .touxiangA .touxiangB .two a div{
+flex: 8;
+width: 100%;
+height: 2px;
+background: #ededed;
+position: relative;
+margin: 15px 10px 0px 10px;
+}
+.shortcut .dabox .touxiangA .touxiangB .two a div::after{
+position: absolute;
+left: 0px;
+height: 0px;
+content: " ";
+display: block;
+width: 50%;
+height: 100%;
+background-color: #F3CB85;
+}
+.shortcut .dabox .touxiangA .touxiangB .two a i{
+flex: 1;
+}
+.shortcut .dabox .touxiangA .touxiangB .three{
+width: 100%;
+height: 32px;
+/* background-color: skyblue; */
+padding: 0px 20px 0px 20px;
+margin-top: 20px;
+}
+.shortcut .dabox .touxiangA .touxiangB .three ul{
+display: flex;
+}
+.shortcut .dabox .touxiangA .touxiangB .three ul li{
+flex: 1;
+text-align: center;
+line-height: 16px;
+}
+.shortcut .dabox .touxiangA .touxiangB .three ul li a{
+font-size: 18px;
+}
+.shortcut .dabox .touxiangA .touxiangB .three ul li p{
+font-size: 12px;
+color: #8D9196;
+}
+.shortcut .dabox .touxiangA .touxiangB .three ul li:hover a{
+color: #00AEEC;
+}
+.shortcut .dabox .touxiangA .touxiangB .three ul li:hover p{
+color: #00AEEC;
+}
+.shortcut .dabox .touxiangA .touxiangB .four{
+width: 100%;
+height: 160px;
+/* margin-top: 20px; */
+padding: 15px 20px 0px 20px;    
+}
+.shortcut .dabox .touxiangA .touxiangB .four table{
+width: 100%;
+height: 100%;
+line-height: 45px;
+/* background-color: red; */
+border-bottom: 1px solid rgb(227,229,231);
+border-collapse:collapse;
+}
+.shortcut .dabox .touxiangA .touxiangB .four table tr:hover{
+background-color: rgb(227,229,231);
+}
+.shortcut .dabox .touxiangA .touxiangB .four table tr td:nth-child(1){
+text-align: right;
+width: 60px;
+color: rgb(94,101,109);
+}.shortcut .dabox .touxiangA .touxiangB .four table tr td:nth-child(2){
+text-align: center;
+width: 110px;
+color: rgb(94,101,109);
+}
+.shortcut .dabox .touxiangA .touxiangB .four table tr td:nth-child(3){
+text-align: right;
+padding-right: 40px;
+color: rgb(94,101,109);
+}
+.shortcut .dabox .touxiangA .touxiangB .four table tr td a{
+display: block;
+width: 100%;
+height: 100%;
+text-decoration: none;
+}
+.shortcut .dabox .touxiangA .touxiangB .five{
+width: 100%;
+height: 40px;
+line-height: 40px;
+/* text-align: center; */
+
+}
+.shortcut .dabox .touxiangA .touxiangB .five a{
+display: inline-block;
+width: 100%;
+height: 100%;
+text-decoration: none;
+padding-left: 60px;
+padding-right: 60px;
+border-radius: 10px;
+}
+.shortcut .dabox .touxiangA .touxiangB .five a:hover{
+background-color: rgb(227,229,231);
+text-decoration: none;
+}
+.shortcut .dabox .touxiangA .touxiangB .five a i{
+margin-right: 20px;
+}
+.shortcut .dabox .touxiangA .touxiangB .six{
+position: absolute;
+width: 220px;
+height: 280px;
+background-color: white;
+left: 340px;
+top: 10px;
+border-radius: 10px;
+border: 1px solid rgb(227,229,231);
+padding: 10px;
+box-shadow: 1px 1px 5px 2px rgb(193, 193, 193);
+display: none;
+}
+.shortcut .dabox .touxiangA .touxiangB .six ul li{
+font-size: 14px;
+margin-bottom: 10px;
+}
+.shortcut .dabox .touxiangA .touxiangB .six a{
+display: inline-block;
+text-decoration: none;
+width: 100%;
+height: 30px;
+line-height: 30px;
+color: #00a4ff;
+
+}
+/* 头像区 */
+/* 大会员区 */
+.shortcut .dabox .dahuiyuanA{
+width: 500px;
+height: 220px;
+/* background-color: red; */
+position: absolute;
+right: 230px;
+top: 60px;
+padding-top: 20px;
+display: none;
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB{
+width: 100%;
+height: 100%;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 1px 1px 5px 2px rgb(193, 193, 193);
+background-color: white;
+display: flex;
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB .left{
+width: 100%;
+height: 100%;
+flex: 2;
+padding: 10px 0px 5px 20px;
+/* background-color: pink; */
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB .left table{
+width: 100%;
+height: 100%;
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB .left table thead{
+text-align: left;
+font-size: 18px;
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB .left table tbody{
+text-align: left;
+
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB .left table thead tr th:hover a{
+text-decoration: none;
+color: rgb(251,113,153);
+/*  */
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB .left table tbody tr td:nth-child(2){
+text-align: right;
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB .left table tbody tr:nth-child(-n+2) td:hover a{
+    text-decoration: none;
+color: rgb(251,113,153);
+/*  */
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB .left table tbody tr:nth-child(3) a{
+text-decoration: none;
+display: inline-block;
+width: 100%;
+height: 100%;
+/*  */
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB .left table tbody tr:nth-child(3) a button{
+width: 100%;
+height: 100%;
+border-radius: 10px;
+font-size: 16px;
+border: 0px;
+background-color: #ED508A;
+color:white;
+cursor: pointer;
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB .right{
+flex: 1;
+padding: 20px 10px 20px 10px;
+/* background-color: skyblue; */
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB .right img{
+display:block;
+width: 120px;
+height: 120px;
+margin: 0 auto;
+/* background-color: blue; */
+}
+.shortcut .dabox .dahuiyuanA .dahuiyuanB .right p{
+display: block;
+padding: 0px 0px 0px 5px;
+font-size: 13px;
+margin-top: 10px;
+}
+/* 大会员区 */
+/* 消息区 */
+.shortcut .dabox .xiaoxiA{
+width: 150px;
+height: 250px;
+z-index: 11;
+position: absolute;
+right: 330px;
+top: 60px;
+border-radius: 10px;
+padding-top: 20px;
+display: none;
+}
+.shortcut .dabox .xiaoxiA .xiaoxiB{
+width: 100%;
+height: 100%;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 1px 1px 5px 2px rgb(193, 193, 193);
+background-color: white;
+}
+.shortcut .dabox .xiaoxiA .xiaoxiB ul{
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+}
+.shortcut .dabox .xiaoxiA .xiaoxiB ul li{
+flex: 1;
+padding-left: 20px;
+line-height: 46px;
+/* background-color: yellow; */
+}
+.shortcut .dabox .xiaoxiA .xiaoxiB ul li:hover{
+background-color: rgba(207, 207, 207,0.5);
+}
+.shortcut .dabox .xiaoxiA .xiaoxiB ul li a{
+display: inline-block;
+text-decoration: none;
+width: 100%;
+height: 100%;
+font-size: 15px;
+color: #808489;
+}
+/* 消息区 */
+/* 收藏区 */
+.shortcut .dabox .shouCang{
+position: absolute;
+width: 550px;
+height: 550px;
+right: 100px;
+top: 60px;
+border-radius: 10px;
+z-index: 11;
+padding-top: 20px;
+display: none;
+/* background-color: red; */
+}
+.shortcut .dabox .shouCang .shouCangA{
+width: 100%;
+height: 100%;
+display: flex;
+padding-top: 15px;
+border-radius: 10px;
+box-shadow: 1px 1px 5px 2px rgb(193, 193, 193);
+overflow: hidden;
+background-color: white;
+}
+.shortcut .dabox .shouCang .shouCangA .left{
+flex: 1;
+/* background-color: skyblue; */
+overflow: auto;
+border-right: 1px solid #aaa;
+}
+.shortcut .dabox .shouCang .shouCangA .left ul{
+width: 100%;
+height: 100%;
+/* background-color: skyblue; */
+}
+.shortcut .dabox .shouCang .shouCangA .left::-webkit-scrollbar{
+width: 5px;
+}
+.shortcut .dabox .shouCang .shouCangA .left::-webkit-scrollbar-track{
+background-color: #f3f3f3;
+}
+.shortcut .dabox .shouCang .shouCangA .left::-webkit-scrollbar-thumb{
+background-color: #aaa;
+border-radius: 10px;
+}
+.shortcut .dabox .shouCang .shouCangA .left::-webkit-scrollbar-thumb:hover{
+background-color: #aaa;
+}
+.shortcut .dabox .shouCang .shouCangA .left::-webkit-scrollbar-thumb:active{
+background-color: #aaa;
+}
+.shortcut .dabox .shouCang .shouCangA .left ul li{
+width: 100%;
+height: 60px;
+/* background-color: red; */
+line-height: 60px;
+}
+/* .shortcut .dabox .shouCang .shouCangA .left ul li:hover{
+background-color: #00AEEC;
+color: white;
+}
+.shortcut .dabox .shouCang .shouCangA .left ul li:hover a{
+color: white;
+}
+.shortcut .dabox .shouCang .shouCangA .left ul li:hover i{
+color: white;
+} */
+.shortcut .dabox .shouCang .shouCangA .left ul li a{
+display: inline-block;
+text-decoration: none;
+width: 70%;
+height: 100%;
+padding-left: 20px;
+font-size: 17px;;
+}
+.shortcut .dabox .shouCang .shouCangA .left ul li i{
+color:pink ;
+}
+
+.shortcut .dabox .shouCang .shouCangA .right{
+flex: 2;
+/* background-color: yellowgreen; */
+overflow: auto;
+padding-top: 10px;
+}
+.shortcut .dabox .shouCang .shouCangA .right::-webkit-scrollbar{
+width: 5px;
+}
+.shortcut .dabox .shouCang .shouCangA .right::-webkit-scrollbar-track{
+background-color: #f3f3f3;
+}
+.shortcut .dabox .shouCang .shouCangA .right::-webkit-scrollbar-thumb{
+background-color: #aaa;
+border-radius: 10px;
+}
+.shortcut .dabox .shouCang .shouCangA .right::-webkit-scrollbar-thumb:hover{
+background-color: #aaa;
+}
+.shortcut .dabox .shouCang .shouCangA .right::-webkit-scrollbar-thumb:active{
+background-color: #aaa;
+}
+.shortcut .dabox .shouCang .shouCangA .right ul{
+width: 100%;
+height: 100%;
+display: none;
+}
+.shortcut .dabox .shouCang .shouCangA .right ul li{
+width: 100%;
+height: 90px;
+/* background-color: red; */
+position: relative;
+/* display: inline-block; */
+padding: 8px 8px 8px 5px;
+}
+.shortcut .dabox .shouCang .shouCangA .right ul li:hover{
+background-color: rgba(207, 207, 207,0.5);
+}
+.shortcut .dabox .shouCang .shouCangA .right ul li a{
+display: inline-block;
+text-decoration: none;
+width: 100%;
+height: 100%;
+display: flex;
+padding-right: 10px;
+}
+.shortcut .dabox .shouCang .shouCangA .right ul li a img{
+width: 111px;
+height: 100%;
+border-radius: 10px;
+margin-left: 10px;
+}
+.shortcut .dabox .shouCang .shouCangA .right ul li div{
+width:217px;
+height: 100%;
+padding-left: 10px;
+/* background-color: yellow; */
+}
+.shortcut .dabox .shouCang .shouCangA .right ul li div section{
+margin-top: 5px;
+}
+.shortcut .dabox .shouCang .shouCangA .right ul li .shijian{
+position: absolute;
+left: 80px;
+top: 55px;
+color: white;
+}
+
+/* 收藏区 */
+
+/* 历史区模块 */
+.shortcut .dabox .lishi{
+position: absolute;
+width: 400px;
+height: 550px;
+right: 100px;
+top: 60px;
+border-radius: 10px;
+z-index: 11;
+padding-top: 20px;
+display: none;
+/* background-color: red; */
+/* display: none; */
+}
+.shortcut .dabox .lishi .lishiA{
+width: 100%;
+height: 100%;
+border-radius: 10px;
+overflow: hidden;
+background-color: white;
+display: flex;
+flex-direction: column;
+border: 1px solid rgb(227,229,231);
+box-shadow: 1px 1px 5px 2px rgb(193, 193, 193);
+}
+.shortcut .dabox .lishi .lishiA .top{
+flex: 2;
+/* background-color: pink; */
+border-bottom: 1px solid rgb(227,229,231);
+}
+.shortcut .dabox .lishi .lishiA .top ul{
+display: flex;
+height: 100%;
+}
+.shortcut .dabox .lishi .lishiA .top ul li{
+flex: 1;
+text-align: center;
+line-height:58px;
+font-size: 16px;
+}.shortcut .dabox .lishi .lishiA .top ul li a{
+display: inline-block;
+text-decoration: none;
+width: 100%;
+height: 100%;
+}
+.shortcut .dabox .lishi .lishiA .middle{
+flex: 1;
+padding-left: 10px;
+}
+.shortcut .dabox .lishi .lishiA .middle p{
+width: 100%;
+height: 100%;
+line-height: 29px;
+display: none;
+}
+.shortcut .dabox .lishi .lishiA .bottom{
+flex: 15;
+/* background-color: yellow; */
+overflow: auto;
+/* overflow-x: hidden; */
+}
+.shortcut .dabox .lishi .lishiA .bottom::-webkit-scrollbar{
+width: 5px;
+}
+.shortcut .dabox .lishi .lishiA .bottom::-webkit-scrollbar-track{
+background-color: #f3f3f3;
+}
+.shortcut .dabox .lishi .lishiA .bottom::-webkit-scrollbar-thumb{
+background-color: #aaa;
+border-radius: 10px;
+}
+.shortcut .dabox .lishi .lishiA .bottom::-webkit-scrollbar-thumb:hover{
+background-color: #aaa;
+}
+.shortcut .dabox .lishi .lishiA .bottom::-webkit-scrollbar-thumb:active{
+background-color: #aaa;
+}
+.shortcut .dabox .lishi .lishiA .bottom ul{
+    display: none;
+}
+.shortcut .dabox .lishi .lishiA .bottom ul div{
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+}
+.shortcut .dabox .lishi .lishiA .bottom ul div a{
+text-decoration: none;
+width: 100%;
+height: 110px;
+}
+.shortcut .dabox .lishi .lishiA .bottom ul div a:hover{
+text-decoration: none;
+background-color: #E3E5E7;
+}
+.shortcut .dabox .lishi .lishiA .bottom ul div a li{
+width: 100%;
+height: 110px;
+padding: 5px 10px 5px 10px;
+display: flex;
+/* background-color: pink; */
+}
+.shortcut .dabox .lishi .lishiA .bottom ul div a li img{
+width: 161.8px;
+height: 100px;
+border-radius: 5px;
+/* background-color: skyblue; */
+}
+.shortcut .dabox .lishi .lishiA .bottom ul div a li div{
+width: 211.4px;
+height: 100px;
+padding-left: 10px;
+display: flex;
+flex-direction: column;
+/* background-color: red; */
+}
+.shortcut .dabox .lishi .lishiA .bottom ul div a li div h4{
+width: 100%;
+height: 50px;
+text-overflow: ellipsis;
+overflow: hidden;
+/* background-color: blue; */
+}
+.shortcut .dabox .lishi .lishiA .bottom ul div a li div span{
+width: 100%;
+height: 25px;
+line-height: 25px;
+/* background-color: orchid; */
+}
+.shortcut .dabox .lishi .lishiA .bottom ul div a li div span .iconfont{
+font-size: 16px;
+color: #8D9196;
+}
+.shortcut .dabox .lishi .lishiA .bottom ul div a li div span p{
+/* float: left; */
+display: inline-block;
+font-size: 15px;
+color: #8D9196;
+}
+.bg{
+color:rgb(0,174,236) ;
+border-bottom: 3px solid rgb(0,174,236);
+}
+/* 历史区模块 */
+
+/* 投稿模块 */
+.shortcut .dabox .touGao{
+position: absolute;
+right: 20px;
+top: 60px;
+border-radius: 10px;
+z-index: 11;
+width: 400px;
+height: 90px;
+padding-top: 20px;
+display: none;
+}
+.shortcut .dabox .touGao .touGaoA{
+width: 100%;
+height: 100%;
+border-radius: 10px;
+background-color: #FFFFFF;
+border: 1px solid rgb(227,229,231);
+box-shadow: 1px 1px 5px 2px rgb(193, 193, 193);
+/* background-color: red; */
+}
+.shortcut .dabox .touGao .touGaoA ul{
+width: 100%;
+height: 100%;
+display: flex;
+/* padding: 5px; */
+}
+.shortcut .dabox .touGao .touGaoA a{
+text-decoration: none;
+display: inline-block;
+flex: 1;
+padding: 5px;
+}
+.shortcut .dabox .touGao .touGaoA a li{
+width: 100%;
+height: 100%;
+padding: 5px;
+text-align: center;
+border-radius: 8px;
+}
+.shortcut .dabox .touGao .touGaoA a li:hover{
+background-color: #E3E5E7;
+}
+.shortcut .dabox .touGao .touGaoA a li span{
+display: block;
+font-size: 13px;
+color: #8D9196;
+}
+
+.container{
+    width: 700px;
+    padding-right: 0px; 
+    padding-left: 0px; 
+    margin-right: 0px; 
+    margin-left: 0px;
+    margin-top: 20px;
+}
+/*留言板列表*/
+.mes-board{
+    width: 700px;
+    margin: 15px 0;
+    background-color: #FCF7FF;
+}
+.mes-board li{
+    padding: 0.7em;
+    list-style: none;
+}
+.mes-board li + li{
+    border-top: 5px solid white;
+}
+.mes-board h4{
+    display: inline;
+    margin-right: 10px;
+    font-weight: 400;
+    color: black;
+}
+.mes-board small{
+    color:#999999;
+    float: right;
+}
+.mes-board div{
+    padding: 0.4em 0;
+    text-align: justify;
+    font-size: 12px;
+    margin-top: 10px;
+}
