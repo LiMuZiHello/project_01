@@ -1,4 +1,7 @@
 /* 清除默认样式的代码 */
+html{
+    filter: grayscale(100%);
+}
 * {
     margin: 0px;
     padding: 0px;
